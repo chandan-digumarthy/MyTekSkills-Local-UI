@@ -16,8 +16,8 @@ export class RestService {
 
   constructor(private http:HttpClient, private router: Router) {
     var hostname = window.location.hostname;
-    var portnum = 443;
-    var protocol = "http:";//window.location.protocol;
+    var portnum = window.location.port;
+    var protocol = window.location.protocol;
 
     this.baseUrl = protocol+"//"+hostname+":"+portnum;
   }
